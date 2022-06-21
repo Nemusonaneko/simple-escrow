@@ -1,0 +1,25 @@
+{
+  "name": "simple-escrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nemusonaneko/simple-escrow.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Nemusonaneko/simple-escrow/issues"
+  },
+  "homepage": "https://github.com/Nemusonaneko/simple-escrow#readme",
+  "devDependencies": {
+    "hardhat": "^2.9.9"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0"
+  }
+}
