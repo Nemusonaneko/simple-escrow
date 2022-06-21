@@ -28,7 +28,6 @@ contract SimpleEscrowContract {
         payee = _payee;
         llama = _llama;
         token = IERC20(_token);
-        disputed = false;
     }
 
     function releaseFunds() external {
@@ -45,7 +44,7 @@ contract SimpleEscrowContract {
 
     function dispute() external {
         if(msg.sender != payer && msg.sender != payee) revert notPayerOrPayee();
-        disputed = true;
+        disputed = !disputed;
     }
 
     function sendFunds(address _recipient) external {

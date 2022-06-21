@@ -11,7 +11,7 @@ contract SimpleEscrowFactory {
 
     address immutable public llama;
 
-    event EscrowCreated(address payer, address payee, address token, uint amount);
+    event EscrowCreated(address escrow, address payer, address payee, address token, uint amount);
 
     constructor(address _llama) {
         llama = _llama;
@@ -23,8 +23,6 @@ contract SimpleEscrowFactory {
         token.safeTransferFrom(msg.sender, address(this), _amount);
         token.safeApprove(simpleEscrowContract, _amount);
         token.safeTransfer(simpleEscrowContract, _amount);
-        emit EscrowCreated(msg.sender, _payee, _token, _amount);
+        emit EscrowCreated(simpleEscrowContract, msg.sender, _payee, _token, _amount);
     }
-
-
 }
