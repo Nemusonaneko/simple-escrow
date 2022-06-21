@@ -8,6 +8,6 @@ contract MockToken is ERC20 {
   }
 
   function mint() external {
-    _mint(msg.sender, 100000);
+    _mint(msg.sender, 10000 * (10 ** 18));
   }
 }
