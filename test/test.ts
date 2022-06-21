@@ -13,6 +13,7 @@ describe("SimpleEscrowFactory", function() {
     it("Contract created is correct", async function () {
         const {payer, payee, llama, token, factory} = await basicSetup();
         const contract = await deploy("SimpleEscrowContract", [payer.address, payee.address, llama.address, token.address]);
+        
     })
    
 })
